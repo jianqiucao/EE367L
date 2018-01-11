@@ -1,1 +1,1 @@
-# EE367L
+# EE367L Lab Notes
