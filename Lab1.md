@@ -1,4 +1,4 @@
-#EE367L Lab 1 Introduction
+# EE367L Lab 1 Introduction
 ## TA
   Jianqiu Cao (jianqiuc@hawaii.edu)
 ## Lab time and location
