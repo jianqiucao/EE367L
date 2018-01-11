@@ -4,7 +4,7 @@
 ## Lab time and location
   Thursdays at 4:30-7:30p, POST 214
 ## Self Intruction
-  Name, Major, Year (junior or senior)
+  Name, Major, Year (junior or senior)  
   Send me an email with a face picture attached
 ## Part A: Unix Basics
 - Login into Wiliki account using putty  
