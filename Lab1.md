@@ -62,6 +62,8 @@
 
 - Create a shell script **scriptlab1** which uses **sum** to process each data file in **Data** and outputs results into file **lab1b-results**. Refer to command lines in **scriptlist**.
 
+  - Output redirection: `> filename`(overwrite) or `>> filename`(append)
+
 - Change mode of  **scriptlab1** to 775 and run it
 
   `chmod 775 scriptlab1`
