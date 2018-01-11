@@ -3,9 +3,9 @@
   Jianqiu Cao (jianqiuc@hawaii.edu)
 ## Lab time and location
   Thursdays at 4:30-7:30p, POST 214
-## Self Intrudction
+## Self Introduction
   Name, Major, Year (junior or senior)  
-  Send me an email with your intruduction and a face picture attached
+  Send me an email with your introduction and a face picture attached
 ## Part A: Unix Basics
 - Login into Wiliki account using putty  
   `Host Name: wiliki.eng.hawaii.edu, Port: 22`
