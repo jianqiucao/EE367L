@@ -81,9 +81,9 @@
 
 - Lab Step 1: debug segfault.c
 
-  compile: `gcc -g segfault.c`
-  run: `./a.out`
-  debug: `gdb a.out`
+  compile: `gcc -g segfault.c`  
+  run: `./a.out`  
+  debug: `gdb a.out`  
   fix the buggy code and recompile and rerun it
   
 - Lab Step 2: debug inf.c
