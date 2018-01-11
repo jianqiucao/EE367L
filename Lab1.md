@@ -7,7 +7,7 @@
   
   - Wiliki account. Go to HOLM 250 if you have problem.
   
-  - If you have to miss a lab, contact the TA before lab for compensation.
+  - If you have to miss a lab, contact the TA before lab for making up.
 
 
 
