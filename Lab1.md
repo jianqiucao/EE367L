@@ -68,7 +68,9 @@
 
   `./scriptlab1`
 
-  ​
+- Demonstrate it to the TA. Tar **scriptlab1** and gzip it. Then upload it into laulima:
+
+  `tar -czvf scriptlab.tar.gz scriptlab1`
 
   ​
 
