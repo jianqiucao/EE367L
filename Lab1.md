@@ -1,9 +1,13 @@
 # EE367L Lab 1 Introduction
 ## Note
 
-  The lab is individual work.
-
-  You can use either your laptops or the PCs in the lab. We have 22 PCs in the lab.
+  - The lab is individual work.
+  
+  - You can use either your laptops or the PCs in the lab. We have 22 PCs in the lab.
+  
+  - Wiliki account. Go to HOLM 250 if you have problem.
+  
+  - If you have to miss a lab, contact the TA before lab for compensation.
 
 
 
