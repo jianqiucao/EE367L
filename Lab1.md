@@ -25,12 +25,12 @@
 ### Part A: Basic Commands
 
 - Login to Wiliki account using **PuTTY**  
-  `Host Name: wiliki.eng.hawaii.edu`, `Port: 22`
+  `Host Name: wiliki.eng.hawaii.edu`, `Port: 22`, `User name and password: Wiliki account`
 
 - Create directory **EE367**. 
 
 - Use **FileZilla client** (not FileZilla server) to transfer **Lab1.tar.gz** to **EE367**  
-  `Host: wiliki.eng.hawaii.edu`, `Port: 22`
+  `Host: wiliki.eng.hawaii.edu`, `Port: 22`, `User name and password: Wiliki account`
 
 - Untar the file  
   `tar -xf Lab1.tar.gz`
@@ -89,6 +89,8 @@
 - Lab Step 2: debug inf.c
 
   compile, run and debug the program, and then fix the bug
+  
+- Demo the results to the TA
   
 - Useful commands in GDB:
   `run`, `backtrace`, `frame`, `print`, `kill`, `break`, `next`, `quit`
