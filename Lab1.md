@@ -1,13 +1,13 @@
 # EE367L Lab 1 Introduction
 ## Note
 
-  - The lab is individual work.
+  - Lab 1 is individual work.
   
   - You can use either your laptops or the PCs in the lab. We have 22 PCs in the lab.
   
-  - Wiliki account. Go to HOLM 250 if you have problem.
+  - Use Wiliki account. Go to HOLM 250 if you have problem.
   
-  - If you have to miss a lab, contact the TA before lab for making up.
+  - Attend every lab. If you have to miss a lab, contact the TA before lab for making up.
 
 
 
@@ -54,12 +54,12 @@
 
 - Make **sum** and run it
 
-  `make`
+  `make`  
   `./sum Data/datafile-0`
 
 - Run shell scripts **scriptarg** and **scriptlist**
 
-  `./scriptarg`
+  `./scriptarg`  
   `./scriptlist`
 
 - Create a shell script **scriptlab1** which uses **sum** to process each data file in **Data** and outputs results into file **lab1b-results**. Refer to command lines in **scriptlist**.
@@ -68,7 +68,7 @@
 
 - Change mode of  **scriptlab1** to 775 and run it
 
-  `chmod 775 scriptlab1`
+  `chmod 775 scriptlab1`  
   `./scriptlab1`
 
 - Demonstrate it to the TA. Tar **scriptlab1** and gzip it. Then upload it into laulima:
