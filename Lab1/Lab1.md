@@ -1,12 +1,15 @@
 # EE367L Lab 1 Introduction
+
+（Repo of lab notes: https://github.com/duck8880/EE367L）
+
 ## Note
 
   - Lab 1 is individual work.
-  
+
   - You can use either your laptops or the PCs in the lab. We have 22 PCs in the lab.
-  
+
   - Use Wiliki account. Go to HOLM 250 if you have problem.
-  
+
   - Attend every lab. If you have to miss a lab, contact the TA before lab for making up.
 
 
@@ -83,13 +86,13 @@
   run: `./a.out`  
   debug: `gdb a.out`  
   fix the buggy code and recompile and rerun it
-  
+
 - Lab Step 2: debug inf.c
 
   compile, run and debug the program, and then fix the bug
-  
+
 - Demo the results to the TA
-  
+
 - Useful commands in GDB:
 
   `run`, `backtrace`, `frame`, `print`, `kill`, `break`, `next`, `quit`
