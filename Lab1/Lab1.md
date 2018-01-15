@@ -1,6 +1,6 @@
 # EE367L Lab 1 Introduction
 
-（Repo of lab notes: https://github.com/duck8880/EE367L）
+（Repo of lab notes: <https://github.com/duck8880/EE367L>）
 
 ## Note
 
