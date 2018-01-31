@@ -21,9 +21,7 @@
 
 
 ## Lab Stages
-- Stage 0: 
-  
-  **Run client.c and server.c using your own port numbers.** 
+- **Stage 0: Run client.c and server.c using your own port numbers.** 
 
   - Edit the port number in **client.c** and **server.c**. (Identical number in the two files)
 
@@ -50,14 +48,18 @@
      `fg`  
      `Crtl-C`
      
-- Stage 1:
-  
-  **Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console.**
+- **Stage 1: Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console.**
   
   - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
   
   - Example is in **ls367.c**
   
-- Stage 2:
+- **Stage 2: Have the output of “ls” is sent back to the client, where it is displayed.**  
 
-  **Have the output of “ls” is sent back to the client, where it is displayed.**  
+  - Create a pipe.
+  
+  - In child process, use dup2() to redirect output in stdout to the pipe and execute "ls" command.
+  
+  - In parent process, read the pipe and send the output to the client.
+  
+  - Refer to **pipe.c**
