@@ -8,7 +8,7 @@
 ## Submission deadline
 
   - Feb 8, 2018 7:30 pm
-  - We'll start to work on Lab 5 on Feb 8.
+  - We are scheduled to work on Lab 5 on Feb 8, so please try to complete lab 3 by the beginning of the next lab.
 
     ​
 
