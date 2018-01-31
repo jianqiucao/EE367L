@@ -58,7 +58,7 @@
 
   - Create a pipe.
   
-  - In child process, use dup2() to redirect output in stdout to the pipe and execute "ls" command.
+  - In child process, use **dup2()** to redirect output from stdout to the pipe and execute "ls" command.
   
   - In parent process, read the pipe and send the output to the client.
   
