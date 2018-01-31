@@ -49,8 +49,13 @@
 
      `fg`  
      `Crtl-C`
+     
 - Stage 1:
   
   **Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console. **
   
   -- Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
+  
+- Stage 2:
+
+  **Have the output of “ls” is sent back to the client, where it is displayed.  **  
