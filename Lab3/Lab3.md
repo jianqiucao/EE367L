@@ -21,7 +21,9 @@
 
 
 ## Lab Stages
-- Stage 0: Run client.c and server.c using your own port numbers. 
+- Stage 0: 
+  
+  **Run client.c and server.c using your own port numbers.** 
 
   - Edit the port number in **client.c** and **server.c**. (Identical number in the two files)
 
@@ -47,4 +49,8 @@
 
      `fg`  
      `Crtl-C`
-
+- Stage 1:
+  
+  **Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console. **
+  
+  -- Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
