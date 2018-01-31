@@ -21,7 +21,7 @@
 
 
 ## Lab Stages
-- Simple test
+- Stage 0: Run client.c and server.c using your own port numbers. 
 
   - Edit the port number in **client.c** and **server.c**. (Identical number in the two files)
 
