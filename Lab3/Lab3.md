@@ -54,9 +54,9 @@
   
   **Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console.**
   
-  -- Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
+  - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
   
-  -- Example is in **ls367.c**
+  - Example is in **ls367.c**
   
 - Stage 2:
 
