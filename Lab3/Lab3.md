@@ -15,7 +15,7 @@
     ​
 
 ## Office Hours
-  Wednesdays: 10:30-11: 30 am, POST 214   
+  Wednesdays: 10:30-11:30 am, POST 214   
 
   Thursday: 10:15-11:15 am, POST 214
 
@@ -60,15 +60,21 @@
 
   - In the child process, create a pipe and fork a grandchild process.
   
-  - In the grandchild process, use **dup2()** to redirect output from stdout to the pipe and execute "ls" command.
+  - In the grandchild process, use **dup2()** to redirect output from stdout to the pipe and execute **"ls"** command.
   
   - In child process, read the pipe and send the output to the client.
   
   - Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c)
   
 - **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
-  - Add **while()** before the **getaddrinfo** function
+  
+  - Add **while()** loop in client.c
+  
   - Add code for parsing the command of "**l**" or "**q**".
+  
+  - In client.c, send the command to the server using function **send()**.
+  
+  - In server.c, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**.
 
 - **Stage 4: The client and server should include the command “check”.**
 
