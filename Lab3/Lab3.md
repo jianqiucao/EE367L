@@ -25,7 +25,7 @@
 ## Lab Stages
 - **Stage 0: Run client.c and server.c using your own port numbers.** 
 
-  - Edit the port number in **client.c** and **server.c**. (Identical number in the two files)
+  - Edit the port number in [**client.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/e92b962a-6f04-47a7-91a4-a36045c8696d/client.c) and [**server.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/3b552893-8336-4d52-b736-587a0b60d3c3/server.c). (Identical number in the two files)
 
   - Write a **makefile** and make the **client.c** and **server.c** into executables **client367** and **server367**.
 
