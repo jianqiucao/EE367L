@@ -67,6 +67,8 @@
   - Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c)
   
 - **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
+  - Add **while()** before the **getaddrinfo** function
+  - Add code for parsing the command of "**l**" or "**q**".
 
 - **Stage 4: The client and server should include the command “check”.**
 
