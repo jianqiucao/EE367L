@@ -65,3 +65,18 @@
   - In child process, read the pipe and send the output to the client.
   
   - Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c)
+  
+- **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
+
+- **Stage 4: The client and server should include the command “check”.**
+
+- **Stage 5:
+The client and server should include the command “display”. To implement “display”, first have the server
+display the file directly to the console. Then have the server send the file back to the client.**
+
+- **Stage 6:
+The client and server should include the command “download”. Note that “download” is different from
+“display” because the client will store the file rather than display it on the console.**
+
+- **Stage 7: Complete the assignment.**
+
