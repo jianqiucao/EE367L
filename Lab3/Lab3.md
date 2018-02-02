@@ -54,7 +54,7 @@
   
   - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
   
-  - Example is in **ls367.c**
+  - Example is in [**ls367.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/a1db3538-c01b-4a10-b2b7-360929b20cb8/ls367.c)
   
 - **Stage 2: Have the output of “ls” is sent back to the client, where it is displayed.**  
 
@@ -64,4 +64,4 @@
   
   - In child process, read the pipe and send the output to the client.
   
-  - Refer to **pipe.c**
+  - Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c)
