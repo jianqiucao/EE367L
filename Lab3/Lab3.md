@@ -81,8 +81,11 @@
 - **Stage 4: The client and server should include the command “check”.**
 
   - In **client.c** add code for parsing "c". 
+  
     - Tip: "scanf("%s", cmdline)" doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters(e.g. space). So use **scanf("%\[^\n]%\*c", cmdline)** instead.
+    
     - Tip: For separating command name ("c") and the find name from the command line, you can use strtok_r() or use your own approach.
+  
   - In **server.c** add code for parsing "c" and checking the existence of a file. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
 
 - **Stage 5:
