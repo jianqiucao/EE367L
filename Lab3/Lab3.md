@@ -68,20 +68,22 @@
 
 - **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
 
-  - Add **while()** loop in **client.c**.
+  - In **client.c**: 
+  
+    - Add **while()** loop for getting user input continuously.
 
-  - Add code for parsing the command of "**l**" or "**q**" in **client.c**.
+    - Add code for parsing the command of "**l**" or "**q**".
 
-  - In **client.c**, send the command to the server using function **send()**.
+    - send the command to the server using function **send()**.
 
   - In **server.c**, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**. Tip: recv() dones't add '\0' to the end of the received string, so you have to at '\0' manually.
 
 - **Stage 4: The client and server should include the command “check”.**
 
-  - Add code for parsing "c" in **client.c**. 
-  - Tip: "scanf("%s", cmdline)" doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters(e.g. space). So use **scanf("%\[^\n]%*c", cmdline)** instead.
-  - Tip: For separating command name ("c") and the find name from the command line, you can use strtok_r() or use your own approach.
-  - Add code for parsing "c" and checking the existence of a file in **server.c**. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
+  - In **client.c** add code for parsing "c". 
+    - Tip: "scanf("%s", cmdline)" doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters(e.g. space). So use **scanf("%\[^\n]%\*c", cmdline)** instead.
+    - Tip: For separating command name ("c") and the find name from the command line, you can use strtok_r() or use your own approach.
+  - In **server.c** add code for parsing "c" and checking the existence of a file. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
 
 - **Stage 5:
   The client and server should include the command “display”. To implement “display”, first have the server
