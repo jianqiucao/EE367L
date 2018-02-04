@@ -49,42 +49,47 @@
 
      `fg`  
      `Crtl-C`
-     
+
 - **Stage 1: Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console.**
-  
-  - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in server.c
-  
+
+  - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in **server.c**
+
   - Example is in [**ls367.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/a1db3538-c01b-4a10-b2b7-360929b20cb8/ls367.c)
-  
+
 - **Stage 2: Have the output of “ls” is sent back to the client, where it is displayed.**  
 
   - In the child process, create a pipe and fork a grandchild process.
-  
+
   - In the grandchild process, use **dup2()** to redirect output from stdout to the pipe and execute **"ls"** command.
-  
+
   - In child process, read the pipe and send the output to the client.
-  
-  - Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c)
-  
+
+  - Just need to change **server.c**. Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c).
+
 - **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
-  
-  - Add **while()** loop in client.c
-  
-  - Add code for parsing the command of "**l**" or "**q**".
-  
-  - In client.c, send the command to the server using function **send()**.
-  
-  - In server.c, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**.
+
+  - Add **while()** loop in **client.c**.
+
+  - Add code for parsing the command of "**l**" or "**q**" in **client.c**.
+
+  - In **client.c**, send the command to the server using function **send()**.
+
+  - In **server.c**, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**. Tip: recv() dones't add '\0' to the end of the received string, so you have to at '\0' manually.
 
 - **Stage 4: The client and server should include the command “check”.**
 
+  - Add code for parsing "c" in **client.c**. 
+  - Tip: "scanf("%s", cmdline)" doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters(e.g. space). So use **scanf("%\[^\n]%*c", cmdline)** instead.
+  - Tip: For separating command name ("c") and the find name from the command line, you can use strtok_r() or use your own approach.
+  - Add code for parsing "c" and checking the existence of a file in **server.c**. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
+
 - **Stage 5:
-The client and server should include the command “display”. To implement “display”, first have the server
-display the file directly to the console. Then have the server send the file back to the client.**
+  The client and server should include the command “display”. To implement “display”, first have the server
+  display the file directly to the console. Then have the server send the file back to the client.**
 
 - **Stage 6:
-The client and server should include the command “download”. Note that “download” is different from
-“display” because the client will store the file rather than display it on the console.**
+  The client and server should include the command “download”. Note that “download” is different from
+  “display” because the client will store the file rather than display it on the console.**
 
 - **Stage 7: Complete the assignment.**
 
