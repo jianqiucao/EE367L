@@ -118,6 +118,6 @@
 
 
 
-##Advanced Task
+## Advanced Task
 
 Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple strings.
