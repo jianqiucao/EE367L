@@ -7,7 +7,7 @@
 
 ## Submission deadline
 
-  - Feb 8, 2018 7:30 pm
+  - Feb 8, 2018, 7:30 pm
   - We are scheduled to work on Lab 5 on Feb 8, so please try to complete lab 3 by the beginning of the next lab.
   - Each student must submit individually on Laulima
   - Refer to [Lab3 handout](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/d4d19636-a0e6-4b23-be7d-3e438392b486/EE367Lab3-v2.pdf) for Submission Instructions
@@ -50,6 +50,10 @@
      `fg`  
      `Crtl-C`
 
+  - To check which process is using a specific port, you can use:
+
+     `lsof -i :portNumber`
+
 - **Stage 1: Have the server execute “ls” whenever a client tries to connect to it. The “ls” should output to the console.**
 
   - Add `execl("/usr/bin/ls", "ls", (char *)NULL);` in the child process in **server.c**
@@ -69,32 +73,51 @@
 - **Stage 3: The client should have a user interface that accepts the commands to “list” or “quit”.**
 
   - In **client.c**: 
-  
+
     - Add **while()** loop for getting user input continuously.
 
     - Add code for parsing the command of "**l**" or "**q**".
 
     - send the command to the server using function **send()**.
 
-  - In **server.c**, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**. Tip: recv() dones't add '\0' to the end of the received string, so you have to at '\0' manually.
+  - In **server.c**, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**. Tip: recv() doesn't add '\0' to the end of the received string, so you have to at '\0' manually.
 
 - **Stage 4: The client and server should include the command “check”.**
 
-  - In **client.c** add code for parsing "c". 
-  
-    - Tip: "scanf("%s", cmdline)" doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters(e.g. space). So use **scanf("%\[^\n]%\*c", cmdline)** instead.
-    
-    - Tip: For separating command name ("c") and the find name from the command line, you can use strtok_r() or use your own approach.
-  
-  - In **server.c** add code for parsing "c" and checking the existence of a file. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
+  - In **client.c**, add code for parsing "**c**". 
 
-- **Stage 5:
-  The client and server should include the command “display”. To implement “display”, first have the server
-  display the file directly to the console. Then have the server send the file back to the client.**
+    - Tip: `scanf("%s", cmdline)` doesn't work for getting the whole line of user input. The input string will be cut off at the delimiters (e.g., space). So use the following code instead:
 
-- **Stage 6:
-  The client and server should include the command “download”. Note that “download” is different from
-  “display” because the client will store the file rather than display it on the console.**
+      ``` c
+      fgets(cmdline, MAXDATASIZE, stdin);
+      cmdline[strlen(cmdline) - 1] = '\0';
+      ```
+
+    - Tip: For separating command name ("c") and the file name from the command line, you can use strtok_r() or use your approach.
+
+  - In **server.c**, add code for parsing "c" and checking the existence of a file. You can use "access(filename, F_OK)" for checking. The return value of 0 indicates that the file exists.
+
+- **Stage 5: The client and server should include the command “display”.** 
+
+  To implement “display”, first have the server display the file directly to the console. Then have the server send the file back to the client.
+
+  - In **client.c**, add code for parsing "**p**".
+  - In **server.c**, if a display command is received, execute "**cat**" command, which is similar to **stage 2**, and then send to output to the client. 
+
+- **Stage 6: The client and server should include the command “download”.**
+
+  Note that “download” is different from “display” because the client will store the file rather than display it on the console.
+
+  - In **client.c**, add code for parsing "**d**". Check the existence of the file. If it exists, query the user for if it would like to overwrite the file.
+  - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.
 
 - **Stage 7: Complete the assignment.**
 
+  Implement command "**h**" in the client.
+
+
+
+
+##Advanced Task
+
+Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple strings.
