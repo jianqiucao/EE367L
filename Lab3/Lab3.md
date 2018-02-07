@@ -111,11 +111,11 @@
 
   Note that “download” is different from “display” because the client will store the file rather than display it on the console.  
   
-  - In **client.c**:  
-  
-    - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server.  
-    
-    - Create the file by using ``FILE *fp = fopen(file_name, "w");``, and write file ysing ``fputs(buf, fp);``
+  - In **client.c**: 
+
+    - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server. 
+
+    - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`
    
   - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.
 
