@@ -104,16 +104,16 @@
   To implement “display”, first have the server display the file directly to the console. Then have the server send the file back to the client.
 
   - In **client.c**, add code for parsing "**p**" and displaying the content of the packet coming from the server.
-  
+
   - In **server.c**, if a command display is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Reading the content of the file out by your written code is also applicable.
 
 - **Stage 6: The client and server should include the command “download”.**
 
-  Note that “download” is different from “display” because the client will store the file rather than display it on the console.  
+  Note that “download” is different from “display” because the client will store the file rather than display it on the console.
   
-  - In **client.c**: 
+  - In **client.c**:
 
-    - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server. 
+    - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server.
 
     - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`
    
