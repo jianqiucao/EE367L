@@ -132,7 +132,7 @@ Deal with the problem that the file may be too large to fit into one transmissio
   
 There are several ways to deal with multiple-packet transmission between server and client: 
 
-- Server calculate #packet and tell client before the beginning of the transmission. The server stops after sent sufficient #packets, and the client stops received sufficient #packets. 
+- Server calculates #packet and tells client before the beginning of the transmission. The server stops after sent sufficient #packets, and the client stops received sufficient #packets. 
 
 - Add header in the packets to tell if the packet is intermediate packet or the last packet.
 
