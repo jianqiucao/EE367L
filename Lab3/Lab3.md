@@ -103,16 +103,20 @@
 
   To implement “display”, first have the server display the file directly to the console. Then have the server send the file back to the client.
 
-  - In **client.c**, add code for parsing "**p**".
+  - In **client.c**, add code for parsing "**p**" and displaying the content of the packet coming from the server.
   
-  - In **server.c**, if a display command is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Reading the content of the file out by your written code is also applicable.
+  - In **server.c**, if a command display is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Reading the content of the file out by your written code is also applicable.
 
 - **Stage 6: The client and server should include the command “download”.**
 
-  Note that “download” is different from “display” because the client will store the file rather than display it on the console.
-
-  - In **client.c**, add code for parsing "**d**". Check the existence of the file. If it exists, query the user for if it would like to overwrite the file.
+  Note that “download” is different from “display” because the client will store the file rather than display it on the console.  
   
+  - In **client.c**:  
+  
+    - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server.  
+    
+    - Create the file by using ``FILE *fp = fopen(file_name, "w");``, and write file ysing ``fputs(buf, fp);``
+   
   - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.
 
 - **Stage 7: Complete the assignment.**
@@ -124,4 +128,4 @@
 
 ## Advanced Task
 
-Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple strings.
+Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple packets.
