@@ -105,7 +105,7 @@
 
   - In **client.c**, add code for parsing "**p**".
   
-  - In **server.c**, if a display command is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Another method is read the content of the file out by your written code.
+  - In **server.c**, if a display command is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Another method is to read the content of the file out by your written code.
 
 - **Stage 6: The client and server should include the command “download”.**
 
