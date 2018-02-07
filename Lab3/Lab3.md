@@ -128,4 +128,12 @@
 
 ## Advanced Task
 
-Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple packets.
+Deal with the problem that the file may be too large to fit into one transmission thru socket when executing the "p" or "d" command (e.g., for file3.txt). You need to read the file several times and transmit it thru multiple packets.  
+  
+There are several ways to deal with multiple-packet transmission between server and client: 
+
+- Server calculate #packet and tell client before the beginning of the transmission. The server stops after sent sufficient #packets, and the client stops received sufficient #packets. 
+
+- Add header in the packets to tell if the packet is intermediate packet or the last packet.
+
+- Add control character(e.g., EOT, '\x04') to show the end of the last packet.
