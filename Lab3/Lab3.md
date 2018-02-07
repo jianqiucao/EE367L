@@ -62,11 +62,13 @@
 
 - **Stage 2: Have the output of “ls” is sent back to the client, where it is displayed.**  
 
+  - After received a command "l" from the client, the server create a child process to deal with the command.
+  
   - In the child process, create a pipe and fork a grandchild process.
 
   - In the grandchild process, use **dup2()** to redirect output from stdout to the pipe and execute **"ls"** command.
 
-  - In child process, read the pipe and send the output to the client.
+  - In the child process, read the output from the pipe into a buffer, and send it to the client.
 
   - Just need to change **server.c**. Refer to [**pipe.c**](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/acd131e2-ee40-4048-a614-a8212e8f3571/pipe.c).
 
