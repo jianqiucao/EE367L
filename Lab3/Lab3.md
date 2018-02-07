@@ -104,13 +104,15 @@
   To implement “display”, first have the server display the file directly to the console. Then have the server send the file back to the client.
 
   - In **client.c**, add code for parsing "**p**".
-  - In **server.c**, if a display command is received, execute "**cat**" command, which is similar to **stage 2**, and then send to output to the client. 
+  
+  - In **server.c**, if a display command is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Another method is read the content of the file out by your written code.
 
 - **Stage 6: The client and server should include the command “download”.**
 
   Note that “download” is different from “display” because the client will store the file rather than display it on the console.
 
   - In **client.c**, add code for parsing "**d**". Check the existence of the file. If it exists, query the user for if it would like to overwrite the file.
+  
   - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.
 
 - **Stage 7: Complete the assignment.**
