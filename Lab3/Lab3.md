@@ -121,11 +121,11 @@
 
     - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server.
 
-    - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`  
+    - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`
    
   - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.    
   
-    Tip: You can run client367 in another directory so that the client won't overwrite the original file for downloading it.
+    Tip: You can run client367 in another directory so that the client won't overwrite the original file for downloading it. You can verify your downloaded files by using "`ls -l`" to check the size of the files.
 
 - **Stage 7: Complete the assignment.**
 
