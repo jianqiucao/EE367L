@@ -62,7 +62,7 @@
 
 - **Stage 2: Have the output of “ls” is sent back to the client, where it is displayed.**  
 
-  - After received a command "l" from the client, the server create a child process to deal with the command.
+  - After accepted the connection from the client, the server create a child process to deal with the command.
   
   - In the child process, create a pipe and fork a grandchild process.
 
@@ -82,7 +82,13 @@
 
     - send the command to the server using function **send()**.
 
-  - In **server.c**, receive the command coming from the server using function **recv()**. Parse the command, and execute **"ls"** if it is **"l"**. Tip: recv() doesn't add '\0' to the end of the received string, so you have to at '\0' manually.
+  - In **server.c**: 
+  
+    - Receive the command coming from the server using function **recv()**. 
+    
+    - Parse the command, and execute **"ls"** if it is **"l"**.   
+    
+    Tip: **recv()** doesn't add '\0' to the end of the received string, so you have to at '\0' manually.
 
 - **Stage 4: The client and server should include the command “check”.**
 
@@ -105,7 +111,7 @@
 
   - In **client.c**, add code for parsing "**p**" and displaying the content of the packet coming from the server.
 
-  - In **server.c**, if a command display is received, execute "**cat**" command to the file, which is similar to **stage 2**, and then send to output to the client. Reading the content of the file out by your written code is also applicable.
+  - In **server.c**, if a command display is received, execute "**cat**" command to show the content of the file, which is similar to **stage 2**, and then send the output to the client. Reading the content of the file out by your written code is also applicable.
 
 - **Stage 6: The client and server should include the command “download”.**
 
@@ -115,9 +121,11 @@
 
     - Add code for parsing "**d**". Check the existence of the file. If it exists, query user for if it would like to overwrite the file before send the command to the server.
 
-    - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`
+    - Create the file by using `FILE *fp = fopen(file_name, "w");`, and write file using `fputs(buf, fp);`  
    
-  - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.
+  - In **server.c**, check if the file exists first, and send a message to let the client know the existence. If it exists, send the content to the client.    
+  
+    Tip: You can run client367 in another directory so that the client won't overwrite the original file for downloading it.
 
 - **Stage 7: Complete the assignment.**
 
