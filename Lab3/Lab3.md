@@ -10,7 +10,9 @@
   - Submission deadline is on Feb 8, 2018, 7:30 pm. **Late submission deadline on Feb. 15 with a deduction of 10%.**
   - We are scheduled to work on Lab 5 on Feb 8, so please try to complete lab 3 by the beginning of the next lab.
   - Each student must submit individually on Laulima. Refer to [Lab3 handout](https://laulima.hawaii.edu/access/content/attachment/MAN.80605.201830/Assignments/d4d19636-a0e6-4b23-be7d-3e438392b486/EE367Lab3-v2.pdf) for Submission Instructions.
-  - You can login to wiliki in multiple windows, in which you can run client and server separately, and even edit multiple files at the same time.
+  - Tips:
+    - You can login to wiliki in multiple windows, in which you can run client and server separately, and even edit multiple files at the same time.
+    - Eliminate all the warnings. You may find hints in warning messages when debugging weird problems.
 
     ​
 
