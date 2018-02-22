@@ -40,7 +40,7 @@
   
     - Implement sockets to connect two subnetworks.
     
-    - Extend the configuration file by adding socket links in it, e.g.,    
+    - Extend the configuration file by adding socket links in it, e.g.,    
 
       S 4 wiliki.eng.hawaii.edu 3000 spectra.eng.hawaii.edu 3001
 
