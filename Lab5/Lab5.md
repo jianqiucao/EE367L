@@ -15,6 +15,24 @@
   
   
 ​  
+## Files
+
+  - **main.c**: the main routine.
+  
+    - Read network configuration file, create the lists of nodes and links and implement them.
+    
+    - Create the network nodes as children processes
+    
+    - Start the main routine for the manager
+    
+  - **man.c**: manager software including the main routine of the manager.
+  
+    - Function **man_main()**: Parse and execute the command enter by the user.
+    
+    - Function **file_upload()**: Send the command 'u' (upload) to a host, which will then send a file to another host.
+
+​  
+
 ## Assignments
 
   - Navigate the network simulator
