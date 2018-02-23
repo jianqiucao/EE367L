@@ -2,6 +2,8 @@
 
 （Repo of lab notes: <https://github.com/duck8880/EE367L>）
 
+Example c file and makefile is here: [server.c](https://github.com/duck8880/EE367L/blob/master/Lab3/server.c), [client.c](https://github.com/duck8880/EE367L/blob/master/Lab3/client.c), [makefile](https://github.com/duck8880/EE367L/blob/master/Lab3/makefile).
+
 ​    
 
 
