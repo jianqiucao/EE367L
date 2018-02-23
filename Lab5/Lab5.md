@@ -7,11 +7,8 @@
 
   - Submission deadline: March 8, 2018. You have 4 - 5 weeks for Lab 5.
   
-  - Lab 3 have a Late submission deadline on Feb. 15 with a deduction of 10%.
+  - Your lab 2 reports have been graded. Please turn in both the **revised** and **original** reports on March 1, 2018.
   
-  - Lab 2 (Written report 1: Lifelong learning) is due on Feb 15. Submit the report in hard copy.
-  
-  - Form teams of three.
   
 ​  
 ## Assignments
