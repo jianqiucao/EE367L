@@ -9,7 +9,7 @@
   
   - Your lab 2 reports have been graded. Please turn in both the **revised** and **original** reports on March 1, 2018.
   
-  - Each one in groups can work independently on one improve among three.
+  - Each one in the group can work independently toward one improvement among the three.
   
   - You can finally merge your files using GitHub and test the intergrated program then.
   
