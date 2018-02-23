@@ -19,17 +19,33 @@
 
   - **main.c**: the main routine.
   
-    - Read network configuration file, create the lists of nodes and links and implement them.
+    - **main()**:
     
-    - Create the network nodes as children processes
+      - Read network configuration file, create the lists of nodes and links and implement them.
     
-    - Start the main routine for the manager
+      - Create the network nodes as children processes
     
-  - **man.c**: manager software including the main routine of the manager.
+      - Start the main routine for the manager
+    
+  - **man.c**: the manager software including the main routine of the manager.
   
-    - Function **man_main()**: Parse and execute the command enter by the user.
+    - **man_main()**: Parse and execute the command enter by the user.
     
-    - Function **file_upload()**: Send the command 'u' (upload) to a host, which will then send a file to another host.
+    - **file_upload()**: Send the command 'u' (upload) to a host, which will then send a file to another host.
+    
+  - **host.c**: the host node software including the main routine for the host.
+  
+    - **host_main()**
+    
+      - Receive and execute a command from the manager.
+      
+        This may create jobs, which are put in the job queue.
+        
+      - Examine its incoming network link and convert a packet into a “job”, then put the job in a job queue.
+      
+      - Take exactly one job from the job queue, and execute the job.
+
+        This may create more jobs, which are put in the job queue.
 
 ​  
 
