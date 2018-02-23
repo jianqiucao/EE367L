@@ -27,11 +27,15 @@
       
       Break up a large file into multiple packets. The packets are transferred and reassembled at the destination host.
       
+      Work in function **file_upload()** in **man.c**.
+      
     - Implement a file download from another host, where a file can have up to 1000 bytes.
+    
+      In **man.c**, create function **file_download()**, and add it into the switch statement in function **man_main()**.
     
   - Improvement 2: Switch node
   
-    - Create new files switch.c and possibly switch.h to implement the switch node.
+    - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
     
   - Improvement 3: Sockets as a link option
   
