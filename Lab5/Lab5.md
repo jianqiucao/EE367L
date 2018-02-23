@@ -46,6 +46,8 @@
       - Take exactly one job from the job queue, and execute the job.
 
         This may create more jobs, which are put in the job queue.
+        
+      - Go to sleep for ten milliseconds.
 
 ​  
 
