@@ -103,7 +103,7 @@
     
     - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
     
-    - The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the mananer.
+    - The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the manager.
     
   - Improvement 3: Sockets as a link option
   
