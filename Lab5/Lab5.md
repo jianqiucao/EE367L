@@ -35,19 +35,31 @@
     
   - **host.c**: the host node software including the main routine for the host.
   
-    - **host_main()**
+    - **host_main()**: has a infinite loop, where it does the following in each pass
     
-      - Receive and execute a command from the manager.
+      1. Receive and execute a command from the manager.
       
-        This may create jobs, which are put in the job queue.
+         This may create jobs, which are put in the job queue.
         
-      - Examine its incoming network link and convert a packet into a “job”, then put the job in a job queue.
+      2. Examine its incoming network link and convert a packet into a “job”, then put the job in a job queue.
       
-      - Take exactly one job from the job queue, and execute the job.
+      3. Take exactly one job from the job queue, and execute the job.
 
-        This may create more jobs, which are put in the job queue.
+         This may create more jobs, which are put in the job queue.
         
-      - Go to sleep for ten milliseconds.
+      4. Go to sleep for ten milliseconds.
+  
+  - **switch.c**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager.
+  
+    - **host_main()**: has a infinite loop, where it does the following in each pass
+    
+      1. Examine its incoming network link and convert a packet into a “job”, then put the job in a job queue.
+      
+      2. Take exactly one job from the job queue, and execute the job.
+
+         This may create more jobs, which are put in the job queue.
+        
+      3. Go to sleep for ten milliseconds.
 
 ​  
 
@@ -87,7 +99,11 @@
     
   - Improvement 2: Switch node
   
+    Hints:
+    
     - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
+    
+    - The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the mananer.
     
   - Improvement 3: Sockets as a link option
   
