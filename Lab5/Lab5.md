@@ -65,7 +65,12 @@
   
     - Improve the upload so that it can transfer files of at most 1000 bytes. 
       
-      Break up a large file into multiple packets. The packets are transferred and reassembled at the destination host.
+      Hints:
+      
+      - Break up a large file into multiple packets. The packets are transferred and reassembled at the destination host.
+      - When the sending end executing the job **JOB_FILE_UPLOAD_SEND** (line 493 in host.c), create more intermediate packets **PKT_FILE_UPLOAD_IMD** between the start and the end packets and create jobs **JOB_SEND_PKT_ALL_PORTS** to send them.
+      - When the receiving end got the packet, add a case **PKT_FILE_UPLOAD_IMD** in which we create a job **JOB_FILE_UPLOAD_RECV_IMD** to deal with the intermediate packet (line 367 in host.c). 
+      - Add a case **JOB_FILE_UPLOAD_RECV_IMD** (around line 595 in host.c) to write the file contents into disk.
       
     - Implement a file download from another host, where a file can have up to 1000 bytes.
     
