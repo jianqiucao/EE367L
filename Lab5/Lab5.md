@@ -49,6 +49,10 @@
         
       4. Go to sleep for ten milliseconds.
   
+  - **host.h**: defines data types
+  
+    - The enum type **host_job_type** is defined here. We may need to define more types of jobs in it.
+    
   - **switch.c**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager.
   
     - **host_main()**: has a infinite loop, where it does the following in each pass
@@ -60,6 +64,7 @@
          This may create more jobs, which are put in the job queue.
         
       3. Go to sleep for ten milliseconds.
+     
 
 ​  
 
@@ -102,8 +107,9 @@
     Hints:
     
     - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
-    
-    - The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the manager.
+      The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the manager.
+      
+    - Add switch node and more host nodes into the configuration file.
     
   - Improvement 3: Sockets as a link option
   
