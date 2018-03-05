@@ -121,7 +121,6 @@
     
     Hints:
       
-        Refer to Lab 3 slides and handout. I have uploaded my source files here:  
-      
-        https://github.com/duck8880/EE367L/tree/master/Lab3
+      Refer to Lab 3 slides and handout. I have uploaded my source files here: 
+      <https://github.com/duck8880/EE367L/tree/master/Lab3>
 
