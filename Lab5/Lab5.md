@@ -118,4 +118,10 @@
     - Extend the configuration file by adding socket links in it, e.g.,    
 
       S 4 wiliki.eng.hawaii.edu 3000 spectra.eng.hawaii.edu 3001
+    
+    Hints:
+      
+        Refer to Lab 3 slides and handout. I have uploaded my source files here:  
+      
+        https://github.com/duck8880/EE367L/tree/master/Lab3
 
