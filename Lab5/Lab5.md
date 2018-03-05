@@ -121,6 +121,6 @@
     
     Hints:
       
-      Refer to Lab 3 slides and handout. I have uploaded my source files here: 
+      Refer to Lab 3 slides and handout for how to implement sockets. Also I have uploaded my source files here: 
       <https://github.com/duck8880/EE367L/tree/master/Lab3>
 
