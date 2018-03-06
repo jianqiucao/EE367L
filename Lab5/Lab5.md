@@ -12,8 +12,8 @@
   - Each one in the group can work independently toward one improvement among the three.
   
   - You can finally merge your files using GitHub and test the intergrated program then.
-  
-  
+
+
 ​  
 ## Files
 
@@ -64,7 +64,7 @@
          This may create more jobs, which are put in the job queue.
         
       3. Go to sleep for ten milliseconds.
-     
+    
 
 ​  
 
@@ -112,29 +112,29 @@
     - Add switch node and more host nodes into the configuration file.
     
   - Improvement 3: Sockets as a link option
-  
+
     - Implement sockets to connect two subnetworks.
-    
+
     - Extend the configuration file by adding socket links in it, e.g.,    
 
       S 4 wiliki.eng.hawaii.edu 3000 spectra.eng.hawaii.edu 3001
-    
+
     Hints:
-      
+
     - Refer to Lab 3 slides and handout for how to implement sockets. Also I have uploaded my source files here: 
       <https://github.com/duck8880/EE367L/tree/master/Lab3>
       
-    - Write configure lines in configuration files at both side of the socket. e.g.: 
-    
-      In the configuration file for Machine 1 in Figure 6 in the handout:
+    - The nodes at each end of the link should be both "client" and "server". To establish a bidirectional link, implement two sockets by writing the information in configuration files, e.g., (in Figure 6 in the handout): 
+
+      In the configuration file for Machine 1, we write:
       `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`
-      
-      In the configuration file for Machine 2:
+
+      which means node 4 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3000", and as a client connects to the server at "wiliki.eng.hawaii.edu: 3001".
+
+      In the configuration file for Machine 2, we write:
       `S 5 wiliki.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
-      
-      The above describes the bidirectional link inplemented by two sockets.
 
-    - Assign different node IDs at both side.
+    - Use the port number assigned to you in the Lab 3 handout. Assign different IDs to nodes even if they are in different machine.
 
- 
+
 
