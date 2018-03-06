@@ -107,7 +107,7 @@
     Hints:
     
     - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
-      The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs. However the switch has no connection to the manager.
+      The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs, except that the switch has no connection to the manager.
       
     - Add switch node and more host nodes into the configuration file.
     
@@ -121,6 +121,20 @@
     
     Hints:
       
-      Refer to Lab 3 slides and handout for how to implement sockets. Also I have uploaded my source files here: 
+    - Refer to Lab 3 slides and handout for how to implement sockets. Also I have uploaded my source files here: 
       <https://github.com/duck8880/EE367L/tree/master/Lab3>
+      
+    - Write configure lines in configuration files at both side of the socket. e.g.: 
+    
+      In the configuration file for Machine 1 in Figure 6 in the handout:
+      `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`
+      
+      In the configuration file for Machine 2:
+      `S 5 wiliki.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
+      
+      The above describes the bidirectional link inplemented by two sockets.
+
+    - Assign different node IDs at both side.
+
+ 
 
