@@ -5,7 +5,9 @@
 ​  
 ## Notes
 
-  - Submission deadline: **March 15**, 2018. You have 4 - 5 weeks for Lab 5.
+  - Submission deadline: **March 15**, 2018. Show the TA your program on Lab.
+  
+    You can also show your program later until the end of the semester with a 10% penalty.
   
   - Lab 6 report (Contemporary Issues and Engineering Impacts) is due on **March 15**, 2018
   
