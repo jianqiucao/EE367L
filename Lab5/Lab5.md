@@ -5,9 +5,9 @@
 ​  
 ## Notes
 
-  - Submission deadline: March 8, 2018. You have 4 - 5 weeks for Lab 5.
+  - Submission deadline: **March 15**, 2018. You have 4 - 5 weeks for Lab 5.
   
-  - Your lab 2 reports have been graded. Please turn in both the **revised** and **original** reports on March 1, 2018.
+  - Lab 6 report (Contemporary Issues and Engineering Impacts) is due on **March 15**, 2018
   
   - Each one in the group can work independently toward one improvement among the three.
   
