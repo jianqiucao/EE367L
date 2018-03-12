@@ -129,13 +129,11 @@
     - The nodes at each end of the link should be both "client" and "server". To establish a Symmetrical link, implement two sockets by writing the information in configuration files, e.g., (The topology is in Figure 6 in the handout): 
 
       In the configuration file for Machine 1, we write:  
-
       `S 4 wiliki.eng.hawaii.edu 3000 spectra.eng.hawaii.edu 3001`  
 
       which means node 4 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3000", and as a client connects to the server at "spectra.eng.hawaii.edu: 3001".
 
       In the configuration file for Machine 2, we write:  
-
       `S 5 spectra.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
 
     - Use the port number assigned to you in the Lab 3 handout. Assign different IDs to nodes even if they are in different machine.
