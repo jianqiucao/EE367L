@@ -5,7 +5,7 @@
 ​  
 ## Notes
 
-  - Submission deadline: **March 15**, 2018. Show the TA your program on Lab.
+  - Submission deadline: **March 22**, 2018. Show the TA your program on Lab.
   
     You can also show your program later until the end of the semester with a 10% penalty.
   
