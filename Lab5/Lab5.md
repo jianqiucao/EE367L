@@ -70,6 +70,18 @@
 
 ​  
 
+## Bugs
+
+- **host.c** : function **job_q_add()** (line 169)
+
+  Add the following statement in the "then branch" (After line 174):
+
+  `j->next = NULL;`
+
+  Without this statement, the jobs added to the queue may be lost.
+
+
+
 ## Assignments
 
   - Navigate the network simulator
@@ -129,12 +141,12 @@
     - The nodes at each end of the link should be both "client" and "server". To establish a Symmetrical link, implement two sockets by writing the information in configuration files, e.g., (The topology is in Figure 6 in the handout): 
 
       In the configuration file for Machine 1, we write:  
-      `S 4 wiliki.eng.hawaii.edu 3000 spectra.eng.hawaii.edu 3001`  
+      `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`  
 
-      which means node 4 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3000", and as a client connects to the server at "spectra.eng.hawaii.edu: 3001".
+      which means node 4 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3000", and as a client connects to the server at "wiliki.eng.hawaii.edu: 3001".
 
-      In the configuration file for Machine 2, we write:  
-      `S 5 spectra.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
+      In the configuration file for Machine 2, we write:  (It's similar to the above.)
+      `S 5 wiliki.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
 
     - Use the port number assigned to you in the Lab 3 handout. Assign different IDs to nodes even if they are in different machine.
 
