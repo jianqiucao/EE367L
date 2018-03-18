@@ -138,7 +138,9 @@
     - Refer to Lab 3 slides and handout for how to implement sockets. Also I have uploaded my source files here: 
       <https://github.com/duck8880/EE367L/tree/master/Lab3>
 
-    - The nodes at each end of the link should be both "client" and "server". To establish a Symmetrical link, implement two sockets by writing the information in configuration files, e.g., (The topology is in Figure 6 in the handout): 
+    - The nodes at each end of the link should be both "client" and "server". To establish a Symmetrical link, implement two sockets by writing the information in configuration files, e.g., (The topology is from Figure 6 in the handout): 
+
+      ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab5/Figure1.png)
 
       In the configuration file for Machine 1, we write:  
       `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`  
