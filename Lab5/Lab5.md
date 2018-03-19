@@ -55,18 +55,15 @@
   
     - The enum type **host_job_type** is defined here. We may need to define more types of jobs in it.
     
-  - **switch.c**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager.
-  
-    - **host_main()**: has a infinite loop, where it does the following in each pass
-    
-      1. Examine its incoming network link and convert a packet into a “job”, then put the job in a job queue.
-      
-      2. Take exactly one job from the job queue, and execute the job.
+  - **switch.c**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager. Also, as the tasks is quite simple for a switch node, we don't have to implement the job queue but directly execute the tasks sequentially.
 
-         This may create more jobs, which are put in the job queue.
-        
+    - **switch_main()**: has a infinite loop, where it does the following in each pass
+
+      1. Examine its incoming network link and get packets.
+      2. Look up the destination node ID in the forwarding table, and record the port number and the source node ID if there is no entry for such port. 
+      3. Forward the packet to the corresponding port if we know, or broadcast the packet.
       3. Go to sleep for ten milliseconds.
-    
+
 
 ​  
 
@@ -74,12 +71,41 @@
 
 - **host.c** : function **job_q_add()** (line 169)
 
-  Add the following statement in the "then branch" (After line 174):
+  Add the following statement in the "then branch" (**After line 174**):
 
-  `j->next = NULL;`
+  ```c
+  j->next = NULL;
+  ```
 
   Without this statement, the jobs added to the queue may be lost.
 
+- **net.c** : function **load_net_data_file()**
+
+  In **line 461**, change the "`=`" to "`==`" in the following if statement:
+
+  ```c
+  if (node_type = 'H') {
+  ```
+
+- **Configuration file**
+
+  Note that there is a restriction of node ID that the ID should be consecutive numbers starting from 0, (function load_net_data_file(), from line 470 to line 474 in net.c), so the configuration file showing the topology in Figure 1 (4 host nodes and 1 switch nodes) should be like this:
+
+  ```
+  5
+  H 0
+  H 1
+  S 2
+  H 3
+  H 4
+  4
+  P 0 2
+  P 1 2
+  P 2 3
+  P 2 4
+  ```
+
+  ​
 
 
 ## Assignments
@@ -117,14 +143,17 @@
       - In the job **JOB_FILE_DOWNLOAD_SEND**, the file receiving host a request to the file sending host, who check the existance of the files. If the file exists, using the mechanizm similiar to uploading to download the file.
     
   - Improvement 2: Switch node
-  
+
     Hints:
-    
+
     - Create new files **switch.c** and possibly **switch.h** to implement the switch node.
-      The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the jobs, except that the switch has no connection to the manager.
-      
-    - Add switch node and more host nodes into the configuration file.
-    
+      The structure of the switch.c is similar to the host.c, which contains a infinite loop to deal with the tasks, except that the switch has no connection to the manager. 
+    - As the tasks is quite simple for a switch node, we don't have to implement the job queue but directly execute the tasks sequentially. In the has a infinite loop **switch_main()**, we need to do:
+      - Look up the destination node ID in the forwarding table, and record the port number and the source node ID if there is no entry in the table for them. 
+      - If we can figure out the corresponding port for the destination, then forward the packet the to such port, otherwise broadcast the packet to all ports except the one it was received on.
+    - Add switch node and more host nodes into the configuration file. No that the node IDs need to start from 0.
+    - Modify main.c, net.c (in function **load_net_data_file()**) to support switch node.
+
   - Improvement 3: Sockets as a link option
 
     - Implement sockets to connect two subnetworks.
@@ -143,12 +172,12 @@
       ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab5/Figure1.png)
 
       In the configuration file for Machine 1, we write:  
-      `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`  
+      `S 3 wiliki.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`  
 
-      which means node 4 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3000", and as a client connects to the server at "wiliki.eng.hawaii.edu: 3001".
+      , which means node 3 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3001", and as a client connects to the server at "wiliki.eng.hawaii.edu: 3000".
 
-      In the configuration file for Machine 2, we write:  (It's similar to the above.)
-      `S 5 wiliki.eng.hawaii.edu 3001 wiliki.eng.hawaii.edu 3000`
+      In the configuration file for Machine 1, we write:  (It's similar to the above.)
+      `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`
 
     - Use the port number assigned to you in the Lab 3 handout. Assign different IDs to nodes even if they are in different machine.
 
