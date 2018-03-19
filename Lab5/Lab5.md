@@ -151,8 +151,8 @@
     - As the tasks is quite simple for a switch node, we don't have to implement the job queue but directly execute the tasks sequentially. In the has a infinite loop **switch_main()**, we need to do:
       - Look up the destination node ID in the forwarding table, and record the port number and the source node ID if there is no entry in the table for them. 
       - If we can figure out the corresponding port for the destination, then forward the packet the to such port, otherwise broadcast the packet to all ports except the one it was received on.
+    - Modify **main.c**, **net.c** (in function **load_net_data_file()**) to support switch node.
     - Add switch node and more host nodes into the configuration file. No that the node IDs need to start from 0.
-    - Modify main.c, net.c (in function **load_net_data_file()**) to support switch node.
 
   - Improvement 3: Sockets as a link option
 
