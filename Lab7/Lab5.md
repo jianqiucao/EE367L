@@ -88,3 +88,15 @@
 - **Configuration file**
 
   Note that there is a restriction of node ID that the ID should be consecutive numbers starting from **0**, (function load_net_data_file(), from line 470 to line 474 in net.c).
+
+
+  ​
+## Assignments
+
+ - Improvement 1: Arbitrary Network Topologies
+ 
+   I have uploaded a configuration file [circles.config](https://github.com/duck8880/EE367L/blob/master/Lab7/circles.config) for the following topology, you may use it for testing the improvement 1.  
+   
+   ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab7/Figure1.png)
+ 
+ - Improvement 2: DNS Server and Downloading 
