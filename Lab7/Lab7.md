@@ -7,7 +7,7 @@
 
   - Submission deadline: **April 26**, 2018. Show the TA your program on Lab.
   
-  - Revision of Lab 6 report (Contemporary Issues and Engineering Impacts) is due on **April 5**, 2018
+  - Revision of Lab 6 report (Contemporary Issues and Engineering Impacts) is due on **April 5**, 2018.  
     For those whose first draft I didn't return before the spring break, you'll have one more week for revision.
     
   - Lab 8 report (Written report 3, Algorithms) is due on **April 19**, 2018
@@ -99,7 +99,7 @@
    
    To achieve the improvement, we need to:
    
-    1. Define data structure for local tree information and tree packets.
+   1. Define data structure for local tree information and tree packets.
      
       - The local tree information for swtiches include `localRootID`, `localRootDist`, `localParent`, `localPortTree[k]`. 
       
@@ -109,7 +109,7 @@
       
         We can define the structure in **main.h**, where the structure `packet` is defined. 
         
-    2. Send tree packets regularly to its neighbours.
+   2. Send tree packets regularly to its neighbours.
     
       The nodes will out the fields in the tree packets according to their local information, and then send the tree packets regularly with intervals of hundreds of milliseconds. Use a counter for timing in the main loop in the host and swtich nodes.  
       
@@ -117,7 +117,7 @@
       
       Changes should be made to **switch.c** and **host.c**, and possibly **packet.c** and their corresponding .h files.
       
-    3. The switch who receives a tree packet update its local tree information according to the information in the tree packet.
+   3. The switch who receives a tree packet update its local tree information according to the information in the tree packet.
     
       The algorighm is in the handout. The switches can update the forwarding table by reference to the incoming tree packets as well.
       
