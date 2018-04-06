@@ -95,38 +95,38 @@
 
   - **Improvement 1: Arbitrary Network Topologies**
 
-   The network will generate spanning tree by exchanging tree packets, in which there are tree information such as RootID, RootDist, etc. The regular packets (non-tree packets) will be sent to tree links only. More detail are presented in the lab handout.
+    The network will generate spanning tree by exchanging tree packets, in which there are tree information such as RootID, RootDist, etc. The regular packets (non-tree packets) will be sent to tree links only. More detail are presented in the lab handout.
    
-   To achieve the improvement, we need to:
+    To achieve the improvement, we need to:
    
-   1. Define data structure for local tree information and tree packets.
+    1. Define data structure for local tree information and tree packets.
      
-      - The local tree information for swtiches include `localRootID`, `localRootDist`, `localParent`, `localPortTree[k]`. 
+       - The local tree information for swtiches include `localRootID`, `localRootDist`, `localParent`, `localPortTree[k]`. 
       
-        We can define them as several variables or as a structure.
+         We can define them as several variables or as a structure.
       
-      - The tree packets contain the following fields: `packetRootID`, `packetRootDist`, `packetSenderType`, `packetSenderChild`. There field can be stored in the payload of the ordinary packets. 
+       - The tree packets contain the following fields: `packetRootID`, `packetRootDist`, `packetSenderType`, `packetSenderChild`. There field can be stored in the payload of the ordinary packets. 
       
-        We can define the structure in **main.h**, where the structure `packet` is defined. 
+         We can define the structure in **main.h**, where the structure `packet` is defined. 
         
-   2. Send tree packets regularly to its neighbours.
+    2. Send tree packets regularly to its neighbours.
     
-      The nodes will out the fields in the tree packets according to their local information, and then send the tree packets regularly with intervals of hundreds of milliseconds. Use a counter for timing in the main loop in the host and swtich nodes.  
+       The nodes will out the fields in the tree packets according to their local information, and then send the tree packets regularly with intervals of hundreds of milliseconds. Use a counter for timing in the main loop in the host and swtich nodes.  
       
-      Both switches and hosts send tree packets, except that the `packetSenderType` are different, and that fields other than `packetSenderType` from a host node are insignificant as a host must be in the tree and can't be the root. 
+       Both switches and hosts send tree packets, except that the `packetSenderType` are different, and that fields other than `packetSenderType` from a host node are insignificant as a host must be in the tree and can't be the root. 
       
-      Changes should be made to **switch.c** and **host.c**, and possibly **packet.c** and their corresponding .h files.
+       Changes should be made to **switch.c** and **host.c**, and possibly **packet.c** and their corresponding .h files.
       
-   3. The switch who receives a tree packet update its local tree information according to the information in the tree packet.
+    3. The switch who receives a tree packet update its local tree information according to the information in the tree packet.
     
-      The algorighm is in the handout. The switches can update the forwarding table by reference to the incoming tree packets as well.
+       The algorighm is in the handout. The switches can update the forwarding table by reference to the incoming tree packets as well.
       
-      Changes should be made to **switch.c**.
+       Changes should be made to **switch.c**.
  
-   I have uploaded a configuration file [circles.config](https://github.com/duck8880/EE367L/blob/master/Lab7/circles.config) for the following topology, you may use it for testing the improvement 1. 
+    I have uploaded a configuration file [circles.config](https://github.com/duck8880/EE367L/blob/master/Lab7/circles.config) for the following topology, you may use it for testing the improvement 1. 
    
    ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab7/Figure1.png)
  
   - **Improvement 2: DNS Server and Downloading** 
    
-   There will be a domain name service (DNS) server. A host’s user can download a file from a remote host by using the remote host’s domain name.
+    There will be a domain name service (DNS) server. A host’s user can download a file from a remote host by using the remote host’s domain name.
