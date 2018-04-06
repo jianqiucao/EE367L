@@ -119,7 +119,7 @@
       
     3. The switch who receives a tree packet update its local tree information according to the information in the tree packet.
     
-       The algorighm is in the handout. The switches can update the forwarding table by reference to the incoming tree packets as well.
+       The algorighm is in the handout. The switches can update the forwarding tables by reference to the incoming tree packets as well.
       
        Changes should be made to **switch.c**.
  
