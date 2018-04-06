@@ -125,7 +125,7 @@
  
     I have uploaded a configuration file [circles.config](https://github.com/duck8880/EE367L/blob/master/Lab7/circles.config) for the following topology, you may use it for testing the improvement 1. 
    
-   ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab7/Figure1.png =301*320)
+   ![Figure 1](https://github.com/duck8880/EE367L/blob/master/Lab7/Figure1.png =301x320)
  
   - **Improvement 2: DNS Server and Downloading** 
    
