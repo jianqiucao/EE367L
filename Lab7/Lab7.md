@@ -107,7 +107,7 @@
       
        - The tree packets contain the following fields: `packetRootID`, `packetRootDist`, `packetSenderType`, `packetSenderChild`. There field can be stored in the payload of the ordinary packets. 
       
-         We can define the structure in **main.h**, where the structure `packet` is defined. 
+         We can define a structure for the payload of tree packet in **main.h**, where the structure `packet` is defined. 
         
     2. Send tree packets regularly to its neighbours.
     
@@ -130,3 +130,22 @@
   - **Improvement 2: DNS Server and Downloading** 
    
     There will be a domain name service (DNS) server. A host’s user can download a file from a remote host by using the remote host’s domain name.
+    
+    - Part 1 – Implementing a ***very simplified*** DNS server.
+    
+      Features of the DNS server:
+        - It has physical ID 100.
+        - It is attached to the network like a host node, using only one link to a switch node.
+        - There is at most one DNS server in the network.
+        - Only hosts can have domain names.
+        - The manager system does not connect to the DNS server.
+        - Allow a user from a host to register a domain name for the host. This is done through the manager system.
+        
+      A host can do two types of operations with the DNS server:
+        - Register Domain Name and Reply.
+        - Request Physical ID and Reply.
+    
+    - Part 2 – Host can ping a remote host using the remote host’s domain name
+    
+    - Part 3 – Host can download a file from a remote host using the remote host’s domain name.
+    
