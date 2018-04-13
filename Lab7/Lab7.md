@@ -142,7 +142,7 @@
 
         - Register Domain Name and Reply.
 
-          To register, a host sends a packet to the DNS server which carries its domain name; The DNS server the name add/update the name to its naming table; The DNS server reply to the host.
+          To register, a host sends a packet to the DNS server which carries its domain name; The DNS server add/update the name to its naming table; The DNS server reply to the host.
 
         - Request Physical ID and Reply.
 
