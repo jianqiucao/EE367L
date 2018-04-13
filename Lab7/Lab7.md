@@ -136,7 +136,12 @@
         - The manager system does not connect to the DNS server.
         - Allow a user from a host to register a domain name for the host. This is done through the manager system.
 
+      <img src="https://github.com/duck8880/EE367L/blob/master/Lab7/Figure2.png" width="400">
+
+      ​
+
       A host can do two types of operations with the DNS server:
+
         - Register Domain Name and Reply.
 
           To register, a host sends a packet to the DNS server which carries its domain name; The DNS server the name add/update the name to its naming table; The DNS server reply to the host.
@@ -145,8 +150,6 @@
 
           A host sent a domain name to the DNS server through a request packet; The DNS server replies if the physical ID exists, and if it exists, the physical ID as well.  
 
-          <img src="https://github.com/duck8880/EE367L/blob/master/Lab7/Figure2.png" width="400">
-
           ​
 
       To achieve the improvement, we need to:
@@ -154,7 +157,7 @@
       1. Define more types of packets (in **main.h**): `PKT_DNS_REG`, `PKT_DNS_REG_REPLY`, `PKT_DNS_REQ`, `PKT_DNS_REQ_REPLY`.
       2. Add a new command to the system manager (in **man.c**): Specifying and registering a domain name of a host.
       3. Create the DNS server (implemented in **dns.c** and **dns.h**): Similar to a switch node. 
-      4. Use a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
+      4. Create a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
 
     - Part 2 – Host can ping a remote host using the remote host’s domain name
 
