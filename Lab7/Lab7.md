@@ -145,7 +145,7 @@
 
           A host sent a domain name to the DNS server through a request packet; The DNS server replies if the physical ID exists, and if it exists, the physical ID as well.  
 
-          <img src="https://github.com/duck8880/EE367L/blob/master/Lab7/Figure1.png" width="400">
+          <img src="https://github.com/duck8880/EE367L/blob/master/Lab7/Figure2.png" width="400">
 
           ​
 
@@ -154,7 +154,7 @@
       1. Define more types of packets (in **main.h**): `PKT_DNS_REG`, `PKT_DNS_REG_REPLY`, `PKT_DNS_REQ`, `PKT_DNS_REQ_REPLY`.
       2. Add a new command to the system manager (in **man.c**): Specifying and registering a domain name of a host.
       3. Create the DNS server (implemented in **dns.c** and **dns.h**): Similar to a switch node. 
-      4. Use a configuration file which contains the DNS server node.
+      4. Use a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
 
     - Part 2 – Host can ping a remote host using the remote host’s domain name
 
