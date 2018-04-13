@@ -14,7 +14,7 @@
   - You can finally merge your files using GitHub and test the intergrated program then.
 
 ​    
-  ## Files 
+## Files 
 
   - **main.c**: the main routine.
 
@@ -23,8 +23,8 @@
       - Read network configuration file, create the lists of nodes and links and implement them.
       - Create the network nodes as children processes
       - Start the main routine for the manager
-- **main.h**
-  - Types of packets are defined here. We may need to add more types.
+  - **main.h**
+    - Types of packets are defined here. We may need to add more types.
   - **man.c**: the manager software including the main routine of the manager.
 
     - **man_main()**: Parse and execute the command enter by the user.
