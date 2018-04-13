@@ -176,7 +176,7 @@
 
       , which means node 3 as a server, have the domain name "wiliki.eng.hawaii.edu" and the port number "3001", and as a client connects to the server at "wiliki.eng.hawaii.edu: 3000".
 
-      In the configuration file for Machine 1, we write:  (It's similar to the above.)
+      In the configuration file for Machine 2, we write:  (It's similar to the above.)  
       `S 4 wiliki.eng.hawaii.edu 3000 wiliki.eng.hawaii.edu 3001`
 
     - Use the port number assigned to you in the Lab 3 handout. Assign different IDs to nodes even if they are in different machine.
