@@ -153,9 +153,10 @@
       To achieve the improvement, we need to:
 
       1. Define more types of packets (in **main.h**): `PKT_DNS_REG`, `PKT_DNS_REG_REPLY`, `PKT_DNS_REQ`, `PKT_DNS_REQ_REPLY`.
-      2. Add a new command to the system manager (in **man.c**): Specifying and registering a domain name of a host.
-      3. Create the DNS server (implemented in **dns.c** and **dns.h**): Similar to a switch node. 
-      4. Create a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
+      2. Modified **host.c** for sending and accepting the DNS packets.
+      3. Add a new command to the system manager (in **man.c**): Specifying and registering a domain name of a host.
+      4. Create the DNS server (implemented in **dns.c** and **dns.h**): The routine is similar to a switch node. 
+      5. Create a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
 
     - Part 2 – Host can ping a remote host using the remote host’s domain name
 
