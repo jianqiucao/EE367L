@@ -138,8 +138,6 @@
 
       <img src="https://github.com/duck8880/EE367L/blob/master/Lab7/Figure2.png" width="400">
 
-      ​
-
       A host can do two types of operations with the DNS server:
 
         - Register Domain Name and Reply.
