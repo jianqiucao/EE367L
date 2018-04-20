@@ -5,9 +5,11 @@
 ​  
 ## Notes
 
-  - Submission deadline: **April 26**, 2018. Show the TA your program on Lab.
+  - Submission deadline: **May 3**, 2018. Show the TA your program on Lab.
 
-  - Lab 8 report (Written report 3, Algorithms) is due on **April 19**, 2018
+  - Lab 8 report (Written report 3, Algorithms) is due on **April 26**, 2018
+  
+  - Lab 9 report (Written report 4, Report on Labs 2, 5 and 7) is due on **April 26**, 2018
 
   - Each one in the group can work independently toward one improvement among the three.
 
