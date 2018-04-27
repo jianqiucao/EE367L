@@ -44,7 +44,7 @@
   - **host.h**: defines data types
 
     - The enum type **host_job_type** is defined here. We may need to define more types of jobs in it.
-  - **switch.c**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager. Also, as the tasks is quite simple for a switch node, we don't have to implement the job queue but directly execute the tasks sequentially.
+  - **switch.c**, **switch.h**: We will create the file to implement the switch node, which is similar to a host node but has no connection to the manager. Also, as the tasks is quite simple for a switch node, we don't have to implement the job queue but directly execute the tasks sequentially.
 
     - **switch_main()**: has a infinite loop, where it does the following in each pass
 
@@ -53,7 +53,7 @@
       3. Forward the packet to the corresponding port if we know, or broadcast the packet.
       3. Go to sleep for ten milliseconds.
 
-
+  - **dns.c**, **dns.h**: We will create the file to implement the DNS server.
 ​  
 
 ## Issues (The same as Lab5)
