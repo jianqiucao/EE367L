@@ -5,15 +5,11 @@
 ​  
 ## Notes
 
-  - Submission deadline: **May 3**, 2018. Show the TA your program on Lab.
-
-  - Lab 8 report (Written report 3, Algorithms) is due on **April 26**, 2018
-  
-  - Lab 9 report (Written report 4, Report on Labs 2, 5 and 7) is due on **April 26**, 2018
-
-  - Each one in the group can work independently toward one improvement among the three.
-
-  - You can finally merge your files using GitHub and test the intergrated program then.
+  - Submission deadline: **May 3**, 2018. Show the TA your program on Lab.
+  - You can also show me any improvements in Lab 5 on the day of May 3. However, the improvements after the original deadline have to be graded with 10% deduction.
+  - Lab 9 report (Written report 4, Report on Labs 2, 5 and 7) is due on **May 3**, 2018
+  - Lab 10 Evaluation of team members is due by the midnight of May 2, 2018. (If your team has four members, add one more column in the table.)
+  - You can finally merge your files using GitHub and test the integrated program then.
 
 ​    
 ## Files 
@@ -155,12 +151,40 @@
       To achieve the improvement, we need to:
 
       1. Define more types of packets (in **main.h**): `PKT_DNS_REG`, `PKT_DNS_REG_REPLY`, `PKT_DNS_REQ`, `PKT_DNS_REQ_REPLY`.
-      2. Modified **host.c** for sending and accepting the DNS packets.
+      2. Modify **host.c** for sending and accepting the DNS packets.
       3. Add a new command to the system manager (in **man.c**): Specifying and registering a domain name of a host.
-      4. Create the DNS server (implemented in **dns.c** and **dns.h**): The routine is similar to a switch node. 
+      4. Create the DNS server (implemented in **dns.c** and **dns.h**): The routine is similar to a switch node. Make it able to accept and reply the DNS packets.
       5. Create a configuration file which contains the DNS server node. Create a new node-type for the DNS server (e.g. 'D'), and modify the **net.c**.
+
+      ​
 
     - Part 2 – Host can ping a remote host using the remote host’s domain name
 
+      Upgrade the system so that a host can ping a remote host using the remote host’s domain name.
+
+      The ping is basically a two-step process:
+
+      - Get the remote host’s ID from the DNS server (send the `PKT_DNS_REQ` and take the ID from the `PKT_DNS_REQ_REPLY`)
+      - Ping the remote host.
+
+      To achieve the improvement, we need to:
+
+      1. Add a new command to the system manager (in **man.c**): Ping by the domain name.
+      2. Modify **host.c** so that it can conduct the two-step process of ping-by-domain-name.
+
+      ​
+
     - Part 3 – Host can download a file from a remote host using the remote host’s domain name.
+
+      Upgrade the system so that a host can download a file from a remote host using the remote host’s domain name.
+      The download is basically a two-step process:
+
+      - Get the remote host’s ID from the DNS server
+      - Download file from the remote host.
+
+      To achieve the improvement, we need to:
+
+      1. Implement the file download function in Lab 5.
+      2. Add a new command to the system manager (in **man.c**): download by the domain name.
+      3. Modify **host.c** so that it can conduct the two-step process of download-by-domain-name.
 
