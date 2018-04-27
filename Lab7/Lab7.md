@@ -53,7 +53,7 @@
       3. Forward the packet to the corresponding port if we know, or broadcast the packet.
       3. Go to sleep for ten milliseconds.
 
-  - **dns.c**, **dns.h**: We will create the file to implement the DNS server.
+- **dns.c**, **dns.h**: We will create the file to implement the DNS server.
 ​  
 
 ## Issues (The same as Lab5)
